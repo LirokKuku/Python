@@ -1,0 +1,14 @@
+alf = 'ЛОТРН'
+k = 0
+for i1 in alf:
+    for i2 in alf:
+        for i3 in alf:
+            for i4 in alf:
+                for i5 in alf:
+                    for i6 in alf:
+                        for i7 in alf:
+                            for i8 in alf:
+                                word = i1 + i2 + i3 + i4 + i5 + i6 + i7 + i8
+                                if word.count('Л') == 1 and word.count('О') == 3 and word.count('Т') == 2 and word.count('Р') == 1 and word.count('Н') == 1 and 'ОО' in word and 'ТТ' in word:
+                                    k+=1
+print(k)
