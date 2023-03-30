@@ -1,1 +1,0 @@
-f = open(file/14)
