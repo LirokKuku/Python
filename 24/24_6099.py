@@ -1,17 +1,18 @@
-f = open('File/24-249.txt', 'r')
+f = open('File/24-249.txt')
 s = f.readline()
 
-minn = 10000000000000000
+minn = 10**10
+b = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 k = 0
-b = ['0', '1', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 for i in range(len(s)):
     if s[i] in b:
+        b.remove(s[i])
         k += 1
-        b.remove(str(s[i]))
-    if len(b) != 0 and s[i] not in b:
+    if s[i] not in b and len(b) != 0:
         k += 1
     if len(b) == 0:
         minn = min(minn, k)
-        b = ['0', '1', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
         k = 0
+        b = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+    print(minn, b, k)
 print(minn)
