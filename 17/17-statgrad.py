@@ -13,11 +13,11 @@ sp_main = []
 sp = []
 for j in range(len(s) - 1):
     if (((int(s[j]))**2) + ((int(s[j+1]))**2)) < min_1:
-        if ((int(s[j])) % 7 == 0) or ((int(s[j + 1])) % 7 == 0):
+        if (((int(s[j])) % 7 == 0) and ((int(s[j + 1])) % 7 != 0)) or (((int(s[j])) % 7 != 0) and ((int(s[j + 1])) % 7 == 0)):
             if ((str(int(s[j]))[-1]) == (str(int(s[j + 1]))[-2])) or ((str(int(s[j]))[-2]) == (str(int(s[j + 1]))[-1])):
                 maxi = max(maxi, ((int(s[j])) ** 2 + (int(s[j + 1])) ** 2))
                 sp.append(int(s[j]))
                 sp.append(int(s[j + 1]))
                 sp_main.append(sp)
                 sp = []
-print(len(sp_main), maxi, sp_main)
+print(len(sp_main), maxi)
