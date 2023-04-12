@@ -2,14 +2,14 @@
 f = open('File/26-104.txt')
 s = []
 for i in f:
-    s.append(list(map(int,(i.split()))))
+    s.append(list(map(int, (i.split()))))
 s.sort()
 maxr = 0
 maxl = 0
 while len(s) != 0:
     line = 0
     count = 1
-    r=s[0][0]
+    r = s[0][0]
     sp = []
     sp.append(s[0][1])
     s[0] = 0
