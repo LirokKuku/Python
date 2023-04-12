@@ -1,3 +1,4 @@
+# https://kpolyakov.spb.ru/school/ege/gen.php?action=viewTopic&topicId=6092
 f = open('File/26-101.txt')
 s = [int(x) for x in f]
 s = sorted(s, reverse=True)
