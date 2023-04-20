@@ -1,10 +1,9 @@
-for N in range(1, 10000):
+for N in range(4, 100):
     R = bin(N)[2::]
     if N % 3 == 0:
-        R = R + R[-1:-4:-1]
+        R = R + R[-3::]
     else:
-        N = N * 3
-        N = N % 3
-        R = R + bin(N)[2::]
-    if int(R, 2) < 100:
+        R = R + bin(3*(N%3))[2::]
+    R = int(R, 2)
+    if R < 100:
         print(N)
