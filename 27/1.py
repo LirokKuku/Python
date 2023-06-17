@@ -11,6 +11,7 @@ for x in a:
     cnt += summ[s % 71]
     summ[s % 71] += 1
 print(cnt)
+
 # cnt = 0
 # for i in range(len(s)):
 #     summ = 0
