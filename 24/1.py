@@ -6,7 +6,8 @@ kmax = 0
 for i in range(len(s)):
     if s[i] in 'ABC':
         k += 1
-        if k > kmax: kmax = k # kmax = max(k, kmax)
+        if k > kmax:
+            kmax = k # kmax = max(k, kmax)
     else:
         k = 0
 print(kmax)
